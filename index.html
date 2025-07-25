@@ -1,127 +1,22 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>LexiumBypass</title>
-<style>
-  body {
-    margin: 0;
-    background-color: #121212;
-    color: #eee;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-
-  .header {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
-  }
-
-  .rgb-text {
-    font-weight: 900;
-    font-size: 3rem;
-    font-family: 'Segoe UI Black', sans-serif;
-    white-space: nowrap;
-    background: linear-gradient(
-      270deg,
-      red,
-      orange,
-      yellow,
-      green,
-      blue,
-      indigo,
-      violet,
-      red
-    );
-    background-size: 1400% 1400%;
-    background-position: 0% 50%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: rgbShift 8s linear infinite;
-  }
-
-  @keyframes rgbShift {
-    0% {
-      background-position: 0% 50%;
+  <meta charset="UTF-8">
+  <title>LexiumBypass</title>
+  <script>
+    function kontrolEt() {
+      var sifre = document.getElementById("sifre").value;
+      if (sifre === "1337") {
+        window.location.href = "anasayfa.html";
+      } else {
+        alert("Hatalı şifre!");
+      }
     }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
-  .buttons {
-    margin-top: 15px;
-    display: flex;
-    gap: 12px;
-  }
-
-  .btn {
-    background-color: #222;
-    border: 2px solid #555;
-    border-radius: 6px;
-    padding: 10px 22px;
-    color: #eee;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    user-select: none;
-  }
-
-  .btn:hover {
-    border-color: #fff;
-    color: #fff;
-    background-color: #333;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
-  }
-
-  main {
-    max-width: 720px;
-    margin: 140px auto 40px auto;
-    padding: 0 20px;
-    flex-grow: 1;
-  }
-
-  footer {
-    text-align: center;
-    padding: 15px 10px;
-    font-size: 0.9rem;
-    color: #666;
-    border-top: 1px solid #222;
-  }
-</style>
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-/>
+  </script>
 </head>
 <body>
-
-<div class="header">
-  <div class="rgb-text">lexium</div>
-  <div class="buttons">
-    <a href="https://cdn.discordapp.com/attachments/1356230440356413581/1398232131511128136/bys.exe?ex=68849ca6&is=68834b26&hm=74969cfa07ff58fb825be12df75d2cda7e6e41accc9a35b837d20585776c1098&" class="btn" download>Bypass</a>
-    <a href="https://download.scdn.co/SpotifySetup.exe" class="btn" download>Spotify</a>
-    <a href="https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x64" class="btn" download>Discord</a>
-    <a href="https://github.com/SpotX-Official/SpotX/archive/refs/heads/main.zip" class="btn" download>SpotX</a>
-  </div>
-</div>
-
-<main>
-  <!-- İstersen buraya içerik ekleyebilirsin -->
-</main>
-
-<footer>
-  &copy; 2025 Lexium. Tüm hakları saklıdır.
-</footer>
-
+  <h2>Giriş Yap</h2>
+  <input type="password" id="sifre" placeholder="Şifre girin">
+  <button onclick="kontrolEt()">Giriş</button>
 </body>
 </html>
